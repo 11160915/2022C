@@ -89,7 +89,68 @@ int main()
     if("a==0") printf("不管什麼東西,幾乎都成立\n");
 }
 ```
+#week 07
+##week 07-1 long long int,
+今天上課,復習之前教過的int整數型別, 只有32-bit,最多只能裝2,147,483,647, 所以很長很長的整數, 要用 long long int,
+```cpp
+#include<stdio.H>
+int main()
+{
+    int n=1234567812345678;
+    printf("%d\n",n);
+    long long int a=1234567812345678;
+    printf("%lld\n", a);
+}
+```
+##week07-2 複習最大公因數
+有了long long int 那我們便能回來複習最大公因數了。數字範圍再大一點, 結果要算好久。讀寫資料時要用%lld 是小寫的LLD
+```cpp
+#include <stdio.h>
+int main()
+{
+    long long int a, b;
+    scanf("%lld %lld", &a, &b);
 
+    long long int ans;
+    for(long long int i = 1; i<=a; i++){
+            if( a%i==0 && b%i==0 ) ans = i;
+    }
+    printf("答案是:%lld\n", ans);
+}
+```
+##week07-3 輾轉相除法
+今天再用 long long int 很長很長的整數 再做一次。口訣是 老大a, 老二b 可以算出 老三c=a%b, 如果老三c是0, 老二b就是答案。輾轉的意是,是老二變老大, 老三變老二, 利用while(1)持續去做。
+```cpp
+#include <stdio.h>
+int main()
+{
+    long long int a, b, c;
+    scanf("%lld%lld", &a, &b );
+
+    while(1){
+        c= a%b;
+        printf("%lld %lld %lld\n", a, b, c);
+        if(c==0) break;
+        a=b;
+        b=c;
+    }
+    printf("答案是:%lld\n", b);
+}
+```
+##week07-4 剝皮法
+把數字3位一逗號。再介紹十進位的每一位數取出來,再介紹利用while(迴圈)的方法, 最後還有示範十進位轉二進位。
+```cpp
+#include <stdio.h>
+int main()
+{
+    int n=123456789;
+
+    while( n>0 ){
+        printf("個位數是%d\n", n%10 );
+        n = n/ 10;
+    }
+}
+```
 
 
 
