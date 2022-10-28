@@ -68,7 +68,7 @@ int main()
     }
 }
 ```
-## wEEK06-5 break 什麼意思? c = a%b 什麼意思? while(1) 什麼意思?
+## week06-5 break 什麼意思? c = a%b 什麼意思? while(1) 什麼意思?
 其實所有的數值幾乎都成立, 只有 0 是不成立。
 ```CPP
 #include <stdio.h>
@@ -89,8 +89,8 @@ int main()
     if("a==0") printf("不管什麼東西,幾乎都成立\n");
 }
 ```
-#week 07
-##week 07-1 long long int,
+# week 07
+## week 07-1 long long int,
 今天上課,復習之前教過的int整數型別, 只有32-bit,最多只能裝2,147,483,647, 所以很長很長的整數, 要用 long long int,
 ```cpp
 #include<stdio.H>
@@ -102,7 +102,7 @@ int main()
     printf("%lld\n", a);
 }
 ```
-##week07-2 複習最大公因數
+## week07-2 複習最大公因數
 有了long long int 那我們便能回來複習最大公因數了。數字範圍再大一點, 結果要算好久。讀寫資料時要用%lld 是小寫的LLD
 ```cpp
 #include <stdio.h>
@@ -118,7 +118,7 @@ int main()
     printf("答案是:%lld\n", ans);
 }
 ```
-##week07-3 輾轉相除法
+## week07-3 輾轉相除法
 今天再用 long long int 很長很長的整數 再做一次。口訣是 老大a, 老二b 可以算出 老三c=a%b, 如果老三c是0, 老二b就是答案。輾轉的意是,是老二變老大, 老三變老二, 利用while(1)持續去做。
 ```cpp
 #include <stdio.h>
@@ -137,7 +137,7 @@ int main()
     printf("答案是:%lld\n", b);
 }
 ```
-##week07-4 剝皮法
+## week07-4 剝皮法
 把數字3位一逗號。再介紹十進位的每一位數取出來,再介紹利用while(迴圈)的方法, 最後還有示範十進位轉二進位。
 ```cpp
 #include <stdio.h>
@@ -151,8 +151,8 @@ int main()
     }
 }
 ```
-#week08
-##week08-1 2個 while迴圈 來畫出直角三角形
+# week08
+## week08-1 2個 while迴圈 來畫出直角三角形
 只有2個for迴圈時,口訣是先能畫出正方形。再來的關鍵, 是空格有幾個。空格有n-i個。所以 把 if寫出來, 成立時印空格, else印星星。
 ```cpp
 #include <stdio.h>
@@ -171,7 +171,7 @@ int main()
 	}
 }
 ```
-##week08-2 用2個while迴圈,寫出有空格、有星星的直角三角形
+## week08-2 用2個while迴圈,寫出有空格、有星星的直角三角形
 只能使用2個while迴圈, 去寫出有空格、有星星的直角三角形。前一個課堂作業用了2個for迴圈,是我們現在的基礎, 將在 1分鐘之前改出來。for(int i=1;i<=n; i++){...} 可改成 while迴圈的版本
 ```cpp
 #include <stdio.h>
@@ -193,7 +193,7 @@ int main()
     }
 }
 ```
-##week08-3 質數判別
+## week08-3 質數判別
 質數判別,程式的形狀都很像,好像有for迴圈、if判斷、運算等等, 迴圈中間看情況修改變數, 迴圈後面把變數拿出來用。不過是用暴力法找最大公因數,或是用暴力法找質數,都可這樣思考。判斷某個數是不是質數,就看能不能被約分、能不能被整除。被整除, 就不是質數, 所以就這樣反過來想即可。利用 int bad=0; 一開始還沒有還掉, 迴圈裡發現壞掉時 bad=1; 迴圈後面檢查 if(bad==0)就是質數。
 ```cpp\
 #include <stdio.h>
@@ -211,7 +211,7 @@ int main()
     else printf("%d不是質數(早就壞掉了)");
 }
 ```
-##week08-4 列出質數
+## week08-4 列出質數
  "列出質數" 用 for迴圈列出 2到a 的所有質數。
  ```cpp
  #include <stdio.h>
